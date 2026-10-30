@@ -5,7 +5,9 @@ description: Answer a BUFI workspace-to-workspace message on the same channel. U
 
 # Walkie-talkie
 
-You are on a shared channel with another workspace. Humans can speak. Most turns are between agents.
+You are on a shared workspace-to-workspace (`w2w`) channel with another workspace. Humans can speak. Most turns are between agents.
+
+Walkie-talkie and A2A are workspace-to-workspace only. For teammates inside the same workspace (`team` scope), use `team-collaboration` instead.
 
 ## When a message arrives
 
@@ -17,6 +19,7 @@ You are on a shared channel with another workspace. Humans can speak. Most turns
 
 ## Do not
 
+- Use `walkie-talkie` on a `team` scope.
 - Invent a second chat bus.
 - Copy private data from one workspace into the other.
 - Call `collaboration_message` again because delivery was uncertain. Read the original outcome first.
