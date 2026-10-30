@@ -1,0 +1,52 @@
+{
+  "name": "bufi/skills",
+  "version": "1.0.0",
+  "description": "BUFI Multi-Collection Agent Skills Catalog + Thin TypeScript CLI calling Shiva /agent-tools with shared OAuth 2.1",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BuFi007/skills.git"
+  },
+  "homepage": "https://github.com/BuFi007/skills",
+  "bin": {
+    "bufi": "./src/cli.ts"
+  },
+  "exports": {
+    ".": "./src/cli.ts",
+    "./catalog": "./src/skill-catalog.ts",
+    "./update-notice": "./src/skill-update-notice.ts",
+    "./agent-tools": "./src/agent-tools-client.ts"
+  },
+  "files": [
+    "skills",
+    "src",
+    "index",
+    "scripts",
+    ".claude-plugin",
+    ".codex-plugin",
+    ".cursor-plugin",
+    ".mcp.json",
+    "mcp.json",
+    "metadata.json",
+    "VERSION",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "quality-check": "bash scripts/quality-check.sh",
+    "skills:list": "bun ./src/cli.ts skills list"
+  },
+  "keywords": [
+    "bufi",
+    "skills",
+    "agent-skills",
+    "mcp",
+    "webmcp",
+    "livekit",
+    "a2a",
+    "x402",
+    "erc8183",
+    "treasury"
+  ],
+  "license": "MIT"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "bufi",
+  "version": "1.0.0",
+  "description": "BUFI Multi-Collection Agent Skills Catalog across Personal, Team Treasury, Personal-to-Team AI Collaboration, and x402 / ERC-8183 Agent Commerce.",
+  "author": {
+    "name": "BUFI",
+    "email": "support@bufi.finance",
+    "url": "https://bufi.finance"
+  },
+  "homepage": "https://github.com/BuFi007/skills",
+  "repository": "https://github.com/BuFi007/skills",
+  "license": "MIT",
+  "skills": [
+    "./skills/agentic_collaboration/",
+    "./skills/personal_finance/",
+    "./skills/team_treasury/",
+    "./skills/agent_commerce_x402/"
+  ],
+  "mcpServers": "./.mcp.json"
+}

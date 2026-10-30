@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bufi": {
+      "type": "http",
+      "url": "https://api.bufi.finance/functions/v1/mcp"
+    }
+  }
+}

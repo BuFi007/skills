@@ -1,0 +1,49 @@
+{
+  "name": "bufi",
+  "version": "1.0.0",
+  "description": "BUFI Multi-Collection Agent Skills Catalog across Personal, Team Treasury, Personal-to-Team AI Collaboration, and x402 / ERC-8183 Agent Commerce, paired with the thin TypeScript CLI (`bufi`) and Official BUFI MCP.",
+  "author": {
+    "name": "BUFI",
+    "email": "support@bufi.finance",
+    "url": "https://bufi.finance"
+  },
+  "homepage": "https://github.com/BuFi007/skills",
+  "repository": "https://github.com/BuFi007/skills",
+  "license": "MIT",
+  "keywords": [
+    "bufi",
+    "skills",
+    "agentic-collaboration",
+    "personal-finance",
+    "team-treasury",
+    "agent-commerce",
+    "x402",
+    "erc8183",
+    "mcp",
+    "webmcp",
+    "livekit"
+  ],
+  "skills": [
+    "./skills/agentic_collaboration/bufi-router",
+    "./skills/agentic_collaboration/bufi-desk",
+    "./skills/agentic_collaboration/team-collaboration",
+    "./skills/agentic_collaboration/walkie-talkie",
+    "./skills/agentic_collaboration/w2w-invite",
+    "./skills/agentic_collaboration/a2a-handoff",
+    "./skills/agentic_collaboration/webmcp-cursors",
+    "./skills/personal_finance/personal-wallet-transfers",
+    "./skills/personal_finance/personal-documents-and-inbox",
+    "./skills/personal_finance/personal-arca-tax",
+    "./skills/personal_finance/personal-to-team-bridge",
+    "./skills/team_treasury/treasury-proposals",
+    "./skills/team_treasury/treasury-swaps-and-allocations",
+    "./skills/team_treasury/reimbursements-and-payables",
+    "./skills/team_treasury/invoices-and-receivables",
+    "./skills/team_treasury/payroll-and-runway",
+    "./skills/agent_commerce_x402/agent-wallet-x402",
+    "./skills/agent_commerce_x402/marketplace-deals-and-quotes",
+    "./skills/agent_commerce_x402/w2w-erc8183-escrow-jobs",
+    "./skills/agent_commerce_x402/settlement-channel-signals"
+  ],
+  "mcpServers": "./.mcp.json"
+}

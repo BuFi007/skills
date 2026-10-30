@@ -1,0 +1,86 @@
+{
+  "name": "bufi/skills",
+  "repository": "BuFi007/skills",
+  "version": "1.0.0",
+  "organization": "BUFI",
+  "date": "October 2026",
+  "abstract": "Multi-collection agent skills catalog and thin TypeScript CLI for BUFI Desk across Personal scope, Team Treasury scope, Personal-to-Team AI collaboration, and Agent Commerce (x402 / Marketplace / ERC-8183). Teaches agents when to use the Team LiveKit room, W2W Walkie-Talkie channel, Official MCP, In-Page WebMCP, or the Thin TypeScript CLI, while guaranteeing money always lands in the BuIsland miniplayer and Pending Decisions Inbox.",
+  "architecture": {
+    "oauth_role": "bufi_mcp_agent",
+    "shiva_endpoints": [
+      "GET /agent-tools/catalog?scope=personal",
+      "GET /agent-tools/catalog?scope=team&teamId=<uuid>",
+      "POST /agent-tools/execute?scope=personal",
+      "POST /agent-tools/execute?scope=team&teamId=<uuid>"
+    ],
+    "money_settlement_gate": [
+      "BuIsland Miniplayer",
+      "Pending Decisions Inbox (/decisions)"
+    ],
+    "transports": [
+      "cli",
+      "mcp",
+      "webmcp",
+      "livekit-team-room",
+      "livekit-w2w-walkie-talkie",
+      "a2a"
+    ],
+    "update_mechanism": {
+      "tree_api": "https://api.github.com/repos/BuFi007/skills/git/trees/main?recursive=1",
+      "hash_format": "git-blob-sha1",
+      "cache_ttl_hours": 20,
+      "lockfile": "~/.agents/.skill-lock.json",
+      "refresh_command": "npx skills add BuFi007/skills --full-depth --global --all --yes"
+    }
+  },
+  "collections": {
+    "agentic_collaboration": {
+      "count": 7,
+      "scope": "dual | team | w2w",
+      "description": "Routing, signed-in Desk context, in-workspace Team LiveKit room, cross-workspace W2W Walkie-Talkie, A2A handoff, and WebMCP realtime cursors.",
+      "skills": [
+        "bufi-router",
+        "bufi-desk",
+        "team-collaboration",
+        "walkie-talkie",
+        "w2w-invite",
+        "a2a-handoff",
+        "webmcp-cursors"
+      ]
+    },
+    "personal_finance": {
+      "count": 4,
+      "scope": "personal | personal-to-team",
+      "description": "Personal wallet transfers & swaps, personal documents & inbox, ARCA tax connection, and the Personal-to-Team AI collaboration bridge.",
+      "skills": [
+        "personal-wallet-transfers",
+        "personal-documents-and-inbox",
+        "personal-arca-tax",
+        "personal-to-team-bridge"
+      ]
+    },
+    "team_treasury": {
+      "count": 5,
+      "scope": "team",
+      "description": "Team treasury proposals (Safe / Squads / single-sig), Li.Fi swaps & Morpho/Aave allocations, reimbursements & bills, invoices & receivables, and payroll & runway.",
+      "skills": [
+        "treasury-proposals",
+        "treasury-swaps-and-allocations",
+        "reimbursements-and-payables",
+        "invoices-and-receivables",
+        "payroll-and-runway"
+      ]
+    },
+    "agent_commerce_x402": {
+      "count": 4,
+      "scope": "team | w2w | dual",
+      "description": "Agent wallet transfers & HTTP 402 x402 payments, BUFI Marketplace quotes & deals, W2W ERC-8183 escrow jobs, and Yellow Network Nitrolite settlement channels.",
+      "skills": [
+        "agent-wallet-x402",
+        "marketplace-deals-and-quotes",
+        "w2w-erc8183-escrow-jobs",
+        "settlement-channel-signals"
+      ]
+    }
+  }
+}

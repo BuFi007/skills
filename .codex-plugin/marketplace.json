@@ -1,0 +1,27 @@
+{
+  "name": "bufi-skills",
+  "owner": {
+    "name": "BUFI",
+    "email": "support@bufi.finance"
+  },
+  "metadata": {
+    "description": "BUFI Multi-Collection Agent Skills Catalog + Thin TypeScript CLI for Codex",
+    "version": "1.0.0",
+    "homepage": "https://github.com/BuFi007/skills"
+  },
+  "plugins": [
+    {
+      "name": "bufi",
+      "source": "./",
+      "description": "Multi-collection agent skills catalog (agentic_collaboration, personal_finance, team_treasury, agent_commerce_x402) and thin TypeScript CLI for BUFI Desk",
+      "version": "1.0.0",
+      "author": {
+        "name": "BUFI",
+        "url": "https://bufi.finance"
+      },
+      "homepage": "https://github.com/BuFi007/skills",
+      "repository": "https://github.com/BuFi007/skills",
+      "license": "MIT"
+    }
+  ]
+}
